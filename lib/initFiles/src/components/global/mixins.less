@@ -1,0 +1,33 @@
+.transition(@property, @duration, @ease, @delay:0s) {
+    -webkit-transition: @property @duration @ease @delay;
+    -moz-transition: @property @duration @ease @delay;
+    -ms-transition: @property @duration @ease @delay;
+    transition: @property @duration @ease @delay;
+}
+
+.ellipsis() {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.multi-ellipsis(@num) {
+    display: -webkit-box;
+    -webkit-line-clamp: @num;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.rotate (@deg) {
+    -moz-transform: rotate(@deg);
+    -webkit-transform: rotate(@deg);
+    -ms-transform: rotate(@deg);
+    transform: rotate(@deg);
+}
+
+.border-radius(@tl, @tr, @br, @bl) {
+    -webkit-border-radius: @tl @tr @br @bl;
+    -moz-border-radius: @tl @tr @br @bl;
+    -ms-border-radius: @tl @tr @br @bl;
+    border-radius: @tl @tr @br @bl;
+}

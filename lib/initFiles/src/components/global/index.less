@@ -1,0 +1,93 @@
+@import "./reset.less";
+@import "./variables.less";
+@import "./mixins.less";
+@import "./print.less";
+@font-face {
+    font-family: 'iconfont';
+    src: url('//at.alicdn.com/t/font_1461133557_1373653.eot'); /* IE9*/
+    src: url('//at.alicdn.com/t/font_1461133557_1373653.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('//at.alicdn.com/t/font_1461133557_1373653.woff') format('woff'), /* chrome、firefox */
+    url('//at.alicdn.com/t/font_1461133557_1373653.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('//at.alicdn.com/t/font_1461133557_1373653.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.content {
+    min-width: 1140px;
+    padding-top: 50px;
+    padding-left: 162px;
+    background-color: #fff;
+    transition: all .3s ease-in-out;
+}
+.expand-body{
+    .content{
+        padding-left: 0;
+    }
+    .sidebar{
+        left: -162px;
+    }
+    #header .top-nav .logo{
+        width: 0;
+    }
+}
+.controls {
+    position: relative;
+    label.error {
+        position: absolute;
+        left: 0;
+        bottom: -18px;
+        font-size: 12px;
+        color: @warnColor;
+    }
+}
+
+.btn {
+    position: relative;
+    height:30px;
+    border: none;
+    border-radius:2px;
+    font-size: 12px;
+    line-height: 30px;
+    color: #fff;
+    text-align: center;
+    background-color: @highlightBg;
+    cursor: pointer;
+}
+
+.clearfix:after{
+    content: "020";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.clearfix {
+    /* 触发 hasLayout */
+    zoom: 1;
+}
+
+/*  模拟checkbox style  */
+.hui-checkbox {
+    display: inline-block;
+    width: 11px;
+    height: 11px;
+    margin-right: 4px;
+    border: 1px solid @nColor;
+    .border-radius(2px, 2px, 2px, 2px);
+    line-height: 11px;
+    font-family: sans-serif;
+    cursor: pointer;
+    .transition(border-color, .2s, ease-in);
+    i {
+        color: transparent;
+        .transition(color, .2s, ease-in);
+        font-style: normal;
+    }
+    &.checked {
+        border-color: @highlightColor;
+        i {
+            color: @highlightColor;
+        }
+    }
+}
+

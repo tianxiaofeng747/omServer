@@ -1,0 +1,83 @@
+@import "../global/index.less";
+
+.sidebar {
+    width: 161px;
+    font-size: 14px;
+    line-height: 22px;
+    border-right: 1px solid #DDD;
+    position: fixed;
+    top: 48px;
+    left: 0;
+    z-index: 9999;
+    background: #F9F9F9 none repeat scroll 0% 0%;
+    height: 100%;
+    float: left;
+    -webkit-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    .nav-tabs {
+        > li {
+            border: 1px solid #DDD;
+            border-right: none;
+            margin-bottom: -1px;
+            text-align: left;
+            overflow: hidden;
+            background: #F9F9F9 none repeat scroll 0% 0%;
+            a {
+                padding: 8px 22px 8px 10px;
+                font-size: 14px;
+                color: #999;
+                display: block;
+                cursor: pointer;
+                .icon {
+                    font-size: 20px;
+                    color: #999;
+                    font-family: 'iconfont';
+                    font-style: normal;
+                    margin-right: 8px;
+                }
+                .icon-r {
+                    float: right;
+                    font-size: 14px;
+                }
+                &:hover {
+                    color: @highlightBg;
+                    .icon {
+                        color: @highlightBg;
+                    }
+                }
+            }
+            .nav-stacked {
+                display: none;
+            }
+        }
+        > li.active {
+            border-right: 2px solid @highlightBg;
+            a {
+                color: @highlightBg;
+                .icon {
+                    color: @highlightBg;
+                }
+            }
+            .nav-stacked {
+                display: block;
+                > li {
+                    border-top: 1px dashed #DDD;
+                    a {
+                        text-indent: 10px;
+                        color: #999;
+                        padding: 8px 22px;
+                        &:hover {
+                            color: @highlightBg;
+                        }
+                    }
+                }
+                > li.active {
+                    a {
+                        color: @highlightBg;
+                    }
+                }
+            }
+        }
+    }
+}

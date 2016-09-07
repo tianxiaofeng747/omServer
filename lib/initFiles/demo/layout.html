@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>财务管理系统</title>
+    <meta name="description" content="财务管理系统">
+    <meta name="keyword" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <link rel="stylesheet" href="../src/page/<%- pageName %>/index.css">
+    <script src="http://cdn.52shangou.com/lib/jquery/1.1.0/build/jquery-2.1.4.min.js"></script>
+    <%- loadJS %>
+</head>
+<body>
+    <div id="header">
+        <div class="top-nav clearfix">
+            <a class="logo" href="/">
+            </a>
+            <ul class="menu clearfix">
+                <li class="item icon"><a class="J_ToggleLayout"></a></li>
+                <li class="item current"><a href="#">项目名称-${name}</a></li>
+            </ul>
+            <div class="login-info clearfix">
+                <span>嗨，管理员 孙健</span><span>|</span> <a href="/logout.htm">退出</a>
+            </div>
+        </div>
+    </div>
+    <div class="sidebar">
+        <ul class="nav-tabs">
+            <li class="active">
+                <a href="warehouseLedger.html">
+                    <i class="icon icon-l">&#xe619;</i>Menu1
+                </a>
+            </li>
+            <li>
+                <a href="inventoryCost.html">
+                    <i class="icon icon-l">&#xe619;</i>Menu2
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="content">
+        <%- body %>
+    </div>
+
+    <script src="../src/page/<%- pageName %>/index.js"></script>
+    <!--<script src="../build/<%- pageName %>/index.js"></script>-->
+</body>
+</html>

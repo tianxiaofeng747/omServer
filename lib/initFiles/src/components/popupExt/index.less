@@ -1,0 +1,55 @@
+@import "../../components/global/index.less";
+
+.popup_content {
+    background-color: #fff;
+}
+
+.popup-header {
+    position: relative;
+
+    h3 {
+        height: 48px;
+        padding: 0 20px;
+        line-height: 48px;
+        font-size: 16px;
+        font-weight: 500;
+        color: @fColor;
+        border-bottom: 1px solid #ececec;
+        background-color: @bg;
+    }
+    .popup_close {
+        position: absolute;
+        right: 10px;
+        top: 12px;
+        font-size: 20px;
+        font-family: iconfont;
+        font-style: normal;
+        color: #b7b7b7;
+        cursor: pointer;
+    }
+}
+.popup-body {
+    padding: 50px 10px 40px;
+    font-size: 14px;
+    color: @sColor;
+    text-align: center;
+}
+.popup-footer {
+    text-align: center;
+    button {
+        width: 120px;
+    }
+
+    .common-confirm-btn {
+        display: inline-block;
+        cursor: pointer;
+        margin-bottom: 30px;
+        width: 120px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        color: white;
+        .border-radius(2px,2px,2px,2px);
+        background:#00c05b;
+    }
+}

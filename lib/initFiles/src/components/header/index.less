@@ -1,0 +1,69 @@
+@import "../global/index.less";
+#header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #E5E5E5;
+    .top-nav {
+        padding: 0;
+        .logo {
+            float: left;
+            width: 162px;
+            height: 48px;
+            background: url('http://imgsize.52shangou.com/img/n/01/08/1452257147906_8928.png') no-repeat center #ddd;
+            background-size: 58px 28px;
+            transition: all .3s ease-in-out;
+        }
+        .menu {
+            .item {
+                float: left;
+
+                > a {
+                    display: block;
+                    float: none;
+                    padding: 13px 15px;
+                    text-decoration: none;
+                    font-size: 14px;
+                    color: #999;
+                    &:hover {
+                        background-color: @highlightBg;
+                        color: #FFF;
+                    }
+                }
+                .J_ToggleLayout{
+                    padding: 13px 15px;
+                    cursor: pointer;
+                    &:after {
+                        content: '\e61c';
+                        font-family: 'iconfont';
+                    }
+                }
+            }
+            .item.current {
+                border-bottom: 1px solid @highlightBg;
+                background-color: @highlightBg;
+                > a {
+                    color: #FFF;
+                }
+            }
+        }
+        .login-info {
+            float: right;
+            margin-top: -35px;
+            text-align: left;
+            padding-right: 50px;
+            font-size: 14px;
+            span {
+                margin-right: 20px;
+                color: #999;
+            }
+            a {
+                color: #666;
+                text-decoration: none;
+            }
+        }
+    }
+}

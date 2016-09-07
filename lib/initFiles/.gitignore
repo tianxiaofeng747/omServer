@@ -1,0 +1,7 @@
+.package/*
+.idea/*
+node_modules/*
+*.DS_Store
+.cache/*
+.clam/*
+essi.json

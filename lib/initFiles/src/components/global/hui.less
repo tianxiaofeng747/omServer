@@ -1,0 +1,2343 @@
+
+/* ========================= hui less ========================= */
+/* reset.less */
+//直接复用 采购项目中 暂时不引入 normalize.css git :https://github.com/necolas/normalize.css
+/********************** themes color **********************/
+@default-bg: #FFF;
+@green-base-color: #00C05B;
+@green-base-line-color: #DDD;
+@green-base-bgcolor: #F8F8F8;
+@green-link-color: #4078c0;
+@green-error-color: #F40;
+/* font.less */
+@base-font-size: 12px;
+@base-font-xsize: 14px;
+@base-font-xxsize: 18px;
+@green-base-font-color: #333;
+@green-light-font-color: #666;
+@green-dark-font-color: #999;
+/********************** button.less **********************/
+//@primary-bgcolor:#28a3ef;
+//@primary-border:#1299ec;
+//
+//@success-bgcolor:#43cd6e;
+//@success-border:#34c360;
+//
+//@info-bgcolor:#5bc0de;
+//@info-border:#46b8da;
+//
+//@warning-bgcolor:#fac603;
+//@warning-border:#e1b203;
+//
+//@danger-bgcolor:#ea4a36;
+//@danger-border:#e8351f;
+@disabled-color: #c6c6c6;
+@disabled-bgcolor: #f3f3f3;
+@disabled-border: #e6e6e6;
+.hui-btn {
+  display: inline-block;
+  padding: 2px 14px;
+  box-sizing: border-box;
+  margin-bottom: 0;
+  font-size: 12px;
+  line-height: 18px;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  color: #333333;
+  background-color: #eeeeee;
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+  border: 1px solid #e1e1e1;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+.btn-xlarge {
+  padding: 4px 20px;
+  line-height: 22px;
+  font-size: 14px;
+}
+
+.btn-large {
+  padding: 2px 14px;
+  line-height: 22px;
+  font-size: 14px;
+}
+
+.btn-small {
+  padding: 0px 6px;
+  line-height: 18px;
+  font-size: 12px;
+}
+
+.btn-primary {
+  color: #ffffff;
+  background-color: #28a3ef;
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+  border: 1px solid #1299ec;
+  &:hover,
+  &:focus {
+    color: #ffffff;
+    background-color: #4cb9fc;
+    border: 1px solid #33affc;
+  }
+  &:active {
+    background-color: #1299ec;
+    border: 1px solid #1089d4;
+  }
+}
+
+.btn-success {
+  color: #ffffff;
+  background-color: #43cd6e;
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+  border: 1px solid #34c360;
+  &:hover,
+  &:focus {
+    color: #ffffff;
+    background-color: #49de79;
+    border: 1px solid #33da69;
+  }
+  &:active {
+    background-color: #34c360;
+    border: 1px solid #2eaf56;
+  }
+}
+
+.btn-info {
+  color: #ffffff;
+  background-color: #5bc0de;
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+  border: 1px solid #46b8da;
+  &:hover,
+  &:focus {
+    color: #ffffff;
+    background-color: #85d0e7;
+    border: 1px solid #70c8e2;
+  }
+  &:active {
+    background-color: #46b8da;
+    border: 1px solid #31b0d5;
+  }
+}
+
+.btn-warning {
+  color: #ffffff;
+  background-color: #fac603;
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+  border: 1px solid #e1b203;
+  &:hover,
+  &:focus {
+    color: #ffffff;
+    background-color: #fbd238;
+    border: 1px solid #facc1f;
+  }
+  &:active {
+    background-color: #e1b203;
+    border: 1px solid #c89e02;
+  }
+}
+
+.btn-danger {
+  color: #ffffff;
+  background-color: #ea4a36;
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+  border: 1px solid #e8351f;
+  &:hover,
+  &:focus {
+    color: #ffffff;
+    background-color: #ed6a5a;
+    border: 1px solid #ea5543;
+  }
+  &:active {
+    background-color: #e8351f;
+    border: 1px solid #d72c16;
+  }
+}
+
+.btn-link {
+  border-color: transparent;
+  background-color: transparent;
+  background-image: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  border-color: transparent;
+  cursor: pointer;
+  color: #28a3ef;
+  &:hover,
+  &:focus {
+    color: #4cb9fc;
+    text-decoration: underline;
+    background-color: transparent;
+    border-color: transparent;
+  }
+  &:active {
+    border-color: transparent;
+    background-color: transparent;
+    background-image: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+  }
+}
+
+.hui-btn.disabled,
+.hui-btn[disabled] {
+  cursor: default;
+  background-image: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+.btn-primary.disabled,
+.btn-primary[disabled],
+.btn-primary.disabled:hover,
+.btn-primary[disabled]:hover,
+.btn-primary.disabled:focus,
+.btn-primary[disabled]:focus,
+.btn-primary.disabled:active,
+.btn-primary[disabled]:active,
+.btn-primary.disabled.active,
+.btn-primary[disabled].active {
+  color: @disabled-color;
+  background-color: @disabled-bgcolor;
+  border-color: @disabled-border;
+}
+
+.btn-success.disabled,
+.btn-success[disabled],
+.btn-success.disabled:hover,
+.btn-success[disabled]:hover,
+.btn-success.disabled:focus,
+.btn-success[disabled]:focus,
+.btn-success.disabled:active,
+.btn-success[disabled]:active,
+.btn-success.disabled.active,
+.btn-success[disabled].active {
+  color: @disabled-color;
+  background-color: @disabled-bgcolor;
+  border-color: @disabled-border;
+}
+
+.btn-info.disabled,
+.btn-info[disabled],
+.btn-info.disabled:hover,
+.btn-info[disabled]:hover,
+.btn-info.disabled:focus,
+.btn-info[disabled]:focus,
+.btn-info.disabled:active,
+.btn-info[disabled]:active,
+.btn-info.disabled.active,
+.btn-info[disabled].active {
+  color: @disabled-color;
+  background-color: @disabled-bgcolor;
+  border-color: @disabled-border;
+}
+
+.btn-warning.disabled,
+.btn-warning[disabled],
+.btn-warning.disabled:hover,
+.btn-warning[disabled]:hover,
+.btn-warning.disabled:focus,
+.btn-warning[disabled]:focus,
+.btn-warning.disabled:active,
+.btn-warning[disabled]:active,
+.btn-warning.disabled.active,
+.btn-warning[disabled].active {
+  color: @disabled-color;
+  background-color: @disabled-bgcolor;
+  border-color: @disabled-border;
+}
+
+.btn-danger.disabled,
+.btn-danger[disabled],
+.btn-danger.disabled:hover,
+.btn-danger[disabled]:hover,
+.btn-danger.disabled:focus,
+.btn-danger[disabled]:focus,
+.btn-danger.disabled:active,
+.btn-danger[disabled]:active,
+.btn-danger.disabled.active,
+.btn-danger[disabled].active {
+  color: @disabled-color;
+  background-color: @disabled-bgcolor;
+  border-color: @disabled-border;
+}
+
+.btn-link[disabled],
+.btn-link.disabled,
+.btn-link[disabled]:hover,
+.btn-link.disabled:hover,
+.btn-link[disabled]:focus,
+.btn-link.disabled:focus {
+  color: @disabled-color;
+  text-decoration: none;
+  background: none;
+  border: none;
+}
+
+/* common */
+.clearfix {
+  *zoom: 1; /* for IE 6/7 */
+  &:before,
+  &:after {
+    display: table;
+    content: "";
+    line-height: 0; /* for Opera */
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+/********************* tab.less **********************/
+.hui-tab {
+  padding-left: 20px;
+  margin-bottom: 18px;
+  border-bottom: 1px solid @green-base-line-color;
+  .clearfix();
+  li {
+    width: 100px;
+    height: 50px;
+    line-height: 50px;
+    float: left;
+    text-align: center;
+    margin-bottom: 0px;
+    a {
+      width: 100%;
+      cursor: pointer;
+      display: inline-block;
+      color: @green-base-font-color;
+      font-size: @base-font-size;
+    }
+  }
+  li.active {
+    margin-bottom: 2px;
+    a {
+      border-bottom: @green-base-color solid 3px;
+      font-weight: 700;
+    }
+  }
+}
+
+/********************** table.less **********************/
+.hui-table {
+  width: 100%;
+  margin-bottom: 18px;
+  max-width: 100%;
+  background-color: transparent;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: @green-base-line-color solid 1px;
+  th {
+    height: 30px;
+    padding: 0px 20px;
+    line-height: 30px;
+    text-align: left;
+    vertical-align: middle;
+    border-top: @green-base-line-color solid 1px;
+    border-right: @green-base-line-color solid 1px;
+    color: @green-base-font-color;
+  }
+  td {
+    padding: 10px 20px;
+    line-height: 20px;
+    text-align: left;
+    vertical-align: middle;
+    border-top: @green-base-line-color solid 1px;
+    border-right: @green-base-line-color solid 1px;
+  }
+  th {
+    background-color: @green-base-bgcolor;
+    font-weight: normal;
+  }
+  tr {
+    &:hover {
+      background-color: @green-base-bgcolor;
+    }
+  }
+}
+
+.hui-table-noborder {
+  border: none;
+  th, td {
+    border-right: none;
+  }
+  thead tr:first-child th,
+  thead tr:first-child td {
+    border-top: none;
+  }
+}
+
+.hui-table-odd {
+  th {
+    background-color: @default-bg;
+  }
+  tbody > tr:nth-child(odd) > td,
+  tbody > tr:nth-child(odd) > th {
+    background-color: @green-base-bgcolor;
+  }
+  tbody > tr > td {
+    border-top: none;
+  }
+  tbody > tr:first-child td {
+    border-top: @green-base-line-color solid 1px;
+  }
+}
+
+/********************** panel **********************/
+.hui-container {
+  .fn-r {
+    text-align: right;
+  }
+  .fn-c {
+    text-align: center;
+  }
+  .fn-l {
+    text-align: left;
+  }
+}
+
+.hui-panel {
+  padding: 10px 20px;
+}
+
+.hui-title {
+  height: 30px;
+  line-height: 30px;
+  h3 {
+    font-size: @base-font-xsize;
+    border-bottom: #ddd solid 1px;
+    color: @green-dark-font-color;
+    font-weight: normal;
+  }
+}
+
+/*********************** hui-crumb ***********************/
+.hui-crumb {
+  padding: 10px 20px;
+  list-style: none;
+  font-weight: normal;
+  border-bottom: 1px solid #dddddd;
+  li {
+    display: inline-block;
+    a {
+      color: #28a3ef;
+      text-decoration: none;
+    }
+  }
+  li + li:before {
+    content: "/\00a0";
+    padding: 0 5px;
+    color: #ccc;
+  }
+}
+
+/*********************** hui-pagination ***********************/
+.hui-page {
+  .hui-pagination {
+    display: inline-block;
+    padding-left: 0;
+    margin: 20px 0;
+    border-radius: 4px;
+    li {
+      display: inline;
+      a,
+      span {
+        position: relative;
+        float: left;
+        padding: 9px 14px;
+        margin-left: -1px;
+        line-height: 1.42857143;
+        color: #00c05b;
+        text-decoration: none;
+        background-color: #fff;
+        border: 1px solid #ddd;
+      }
+      &:first-child a,
+      &:first-child span {
+        margin-left: 0;
+        border-top-left-radius: 4px;
+        border-bottom-left-radius: 4px;
+      }
+      &:last-child a,
+      &:last-child span {
+        border-bottom-right-radius: 4px;
+        border-top-right-radius: 4px;
+      }
+    }
+    .disabled a,
+    .disabled a:focus,
+    .disabled a:hover,
+    .disabled span,
+    .disabled span:focus,
+    .disabled span:hover {
+      color: #999;
+      background-color: #fff;
+      border-color: #ddd;
+      cursor: default;
+    }
+    .active a,
+    .active a:focus,
+    .active a:hover,
+    .active span,
+    .active span:focus,
+    .active span:hover {
+      z-index: 2;
+      color: #fff;
+      cursor: default;
+      background-color: #00c05b;
+      border-color: #00c05b;
+    }
+  }
+}
+/* ========================= form ========================= */
+.hui-form {
+  margin: 0 0 18px;
+  font-size: 14px;
+  line-height: 18px;
+  padding: 20px;
+  a {
+    color: #28a3ef;
+    text-decoration: none;
+  }
+  .form-group {
+    display: table;
+    margin-bottom: 15px;
+  }
+  .form-label {
+    display: block;
+    line-height: 24px;
+  }
+  label.require:before {
+    content: '*';
+    color: #F40;
+    margin-right: 5px;
+  }
+}
+
+.form-horizontal {
+  .form-label {
+    width: 96px;
+    text-align: right;
+    display: table-cell;
+    vertical-align: middle;
+  }
+  .form-cont {
+    display: table-cell;
+    padding-left: 3px;
+    a:first-child,
+    > span:first-child {
+      display: inline-block;
+      padding-top: 3px;
+    }
+    .radio-pretty {
+      margin-right: 10px;
+      span {
+        vertical-align: middle;
+      }
+    }
+    input[type=radio] {
+      margin-right: 5px;
+    }
+  }
+}
+.hui-form fieldset {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+.hui-form legend {
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin-bottom: 18px;
+  font-size: 18px;
+  line-height: 36px;
+  color: #333333;
+  border: 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.hui-form legend small {
+  font-size: 13.5px;
+  color: #999999;
+}
+
+.hui-form .input-default {
+  display: inline-block;
+  height: 18px;
+  padding: 2px 4px;
+  font-size: 12px;
+  line-height: 18px;
+  color: #555555;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  vertical-align: middle;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border linear .2s, box-shadow linear .2s;
+  -moz-transition: border linear .2s, box-shadow linear .2s;
+  -o-transition: border linear .2s, box-shadow linear .2s;
+  transition: border linear .2s, box-shadow linear .2s;
+}
+
+.hui-form .input-default:focus {
+  border-color: #28a3ef;
+  outline: 0;
+  outline: thin dotted \9;
+  /* IE6-9 */
+}
+
+.hui-form select,
+.hui-form textarea,
+.hui-form input[type="text"],
+.hui-form input[type="password"],
+.hui-form input[type="datetime"],
+.hui-form input[type="datetime-local"],
+.hui-form input[type="date"],
+.hui-form input[type="month"],
+.hui-form input[type="time"],
+.hui-form input[type="week"],
+.hui-form input[type="number"],
+.hui-form input[type="email"],
+.hui-form input[type="url"],
+.hui-form input[type="search"],
+.hui-form input[type="tel"],
+.hui-form input[type="color"],
+.hui-form .uneditable-input {
+  display: inline-block;
+  height: 18px;
+  padding: 2px 4px;
+  font-size: 12px;
+  line-height: 18px;
+  color: #555555;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  vertical-align: middle;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border linear .2s, box-shadow linear .2s;
+  -moz-transition: border linear .2s, box-shadow linear .2s;
+  -o-transition: border linear .2s, box-shadow linear .2s;
+  transition: border linear .2s, box-shadow linear .2s;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+.hui-form select:focus,
+.hui-form textarea:focus,
+.hui-form input[type="text"]:focus,
+.hui-form input[type="password"]:focus,
+.hui-form input[type="datetime"]:focus,
+.hui-form input[type="datetime-local"]:focus,
+.hui-form input[type="date"]:focus,
+.hui-form input[type="month"]:focus,
+.hui-form input[type="time"]:focus,
+.hui-form input[type="week"]:focus,
+.hui-form input[type="number"]:focus,
+.hui-form input[type="email"]:focus,
+.hui-form input[type="url"]:focus,
+.hui-form input[type="search"]:focus,
+.hui-form input[type="tel"]:focus,
+.hui-form input[type="color"]:focus,
+.hui-form .uneditable-input:focus {
+  border-color: #28a3ef;
+  outline: 0;
+  outline: thin dotted \9;
+  /* IE6-9 */
+}
+
+.hui-form textarea {
+  height: auto;
+  resize: none;
+}
+
+.hui-form input[type="radio"],
+.hui-form input[type="checkbox"] {
+  width: 13px;
+  height: 13px;
+  vertical-align: middle;
+}
+
+.hui-form input[type="file"],
+.hui-form input[type="image"],
+.hui-form input[type="submit"],
+.hui-form input[type="reset"],
+.hui-form input[type="button"] {
+  width: auto;
+}
+
+.hui-form select,
+.hui-form input[type="file"] {
+  height: 24px;
+  /* In IE7, the height of the select element cannot be changed by height, only font-size */
+
+  *margin-top: 4px;
+  /* For IE7, add top margin to align select with labels */
+
+  line-height: 24px;
+}
+
+.hui-form select {
+  border: 1px solid #cccccc;
+  background-color: #ffffff;
+}
+
+.hui-form select[multiple],
+.hui-form select[size] {
+  height: auto;
+}
+
+.hui-form select:focus,
+.hui-form input[type="file"]:focus,
+.hui-form input[type="radio"]:focus,
+.hui-form input[type="checkbox"]:focus {
+  outline: thin dotted #333;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+.hui-form .uneditable-input,
+.hui-form .uneditable-textarea {
+  color: #999999;
+  background-color: #fcfcfc;
+  border-color: #cccccc;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.025);
+  -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.025);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.025);
+  cursor: not-allowed;
+}
+
+.hui-form .uneditable-input {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.hui-form .uneditable-textarea {
+  width: auto;
+  height: auto;
+}
+
+.hui-form input:-moz-placeholder,
+.hui-form textarea:-moz-placeholder {
+  color: #999999;
+}
+
+.hui-form input:-ms-input-placeholder,
+.hui-form textarea:-ms-input-placeholder {
+  color: #999999;
+}
+
+.hui-form input::-webkit-input-placeholder,
+.hui-form textarea::-webkit-input-placeholder {
+  color: #999999;
+}
+
+.hui-form .radio,
+.hui-form .checkbox {
+  display: block;
+}
+
+.hui-form .radio + .radio,
+.hui-form .checkbox + .radio,
+.hui-form .radio + .checkbox,
+.hui-form .checkbox + .checkbox {
+  margin-top: 5px;
+}
+
+.hui-form .radio.inline,
+.hui-form .checkbox.inline {
+  display: inline-block;
+  margin-top: 0;
+}
+
+.hui-form .radio.inline + .radio.inline,
+.hui-form .checkbox.inline + .radio.inline,
+.hui-form .radio.inline + .checkbox.inline,
+.hui-form .checkbox.inline + .checkbox.inline {
+  margin-left: 6px;
+}
+
+.hui-form .input-mini {
+  width: 40px;
+}
+
+.hui-form .input-small {
+  width: 60px;
+}
+
+.hui-form .input-medium {
+  width: 120px;
+}
+
+.hui-form .input-large {
+  width: 200px;
+}
+
+.hui-form .input-xlarge {
+  width: 350px;
+}
+
+.hui-form .input-xxlarge {
+  width: 500px;
+}
+
+.hui-form .input-thin {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.hui-form .input-default {
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+.hui-form .input-fat {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.hui-form .input-xfat {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.hui-form .input-fat {
+  padding-right: 8px;
+  padding-left: 8px;
+}
+
+.hui-form .input-xfat {
+  padding-right: 8px;
+  padding-left: 8px;
+}
+
+.hui-form textarea.input-mini,
+.hui-form input[type="text"].input-mini,
+.hui-form input[type="password"].input-mini,
+.hui-form input[type="datetime"].input-mini,
+.hui-form input[type="datetime-local"].input-mini,
+.hui-form input[type="date"].input-mini,
+.hui-form input[type="month"].input-mini,
+.hui-form input[type="time"].input-mini,
+.hui-form input[type="week"].input-mini,
+.hui-form input[type="number"].input-mini,
+.hui-form input[type="email"].input-mini,
+.hui-form input[type="url"].input-mini,
+.hui-form input[type="search"].input-mini,
+.hui-form input[type="tel"].input-mini,
+.hui-form input[type="color"].input-mini,
+.hui-form .uneditable-input.input-mini {
+  width: 30px;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+.hui-form textarea.input-small,
+.hui-form input[type="text"].input-small,
+.hui-form input[type="password"].input-small,
+.hui-form input[type="datetime"].input-small,
+.hui-form input[type="datetime-local"].input-small,
+.hui-form input[type="date"].input-small,
+.hui-form input[type="month"].input-small,
+.hui-form input[type="time"].input-small,
+.hui-form input[type="week"].input-small,
+.hui-form input[type="number"].input-small,
+.hui-form input[type="email"].input-small,
+.hui-form input[type="url"].input-small,
+.hui-form input[type="search"].input-small,
+.hui-form input[type="tel"].input-small,
+.hui-form input[type="color"].input-small,
+.hui-form .uneditable-input.input-small {
+  width: 50px;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+.hui-form textarea.input-medium,
+.hui-form input[type="text"].input-medium,
+.hui-form input[type="password"].input-medium,
+.hui-form input[type="datetime"].input-medium,
+.hui-form input[type="datetime-local"].input-medium,
+.hui-form input[type="date"].input-medium,
+.hui-form input[type="month"].input-medium,
+.hui-form input[type="time"].input-medium,
+.hui-form input[type="week"].input-medium,
+.hui-form input[type="number"].input-medium,
+.hui-form input[type="email"].input-medium,
+.hui-form input[type="url"].input-medium,
+.hui-form input[type="search"].input-medium,
+.hui-form input[type="tel"].input-medium,
+.hui-form input[type="color"].input-medium,
+.hui-form .uneditable-input.input-medium {
+  width: 110px;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+.hui-form textarea.input-large,
+.hui-form input[type="text"].input-large,
+.hui-form input[type="password"].input-large,
+.hui-form input[type="datetime"].input-large,
+.hui-form input[type="datetime-local"].input-large,
+.hui-form input[type="date"].input-large,
+.hui-form input[type="month"].input-large,
+.hui-form input[type="time"].input-large,
+.hui-form input[type="week"].input-large,
+.hui-form input[type="number"].input-large,
+.hui-form input[type="email"].input-large,
+.hui-form input[type="url"].input-large,
+.hui-form input[type="search"].input-large,
+.hui-form input[type="tel"].input-large,
+.hui-form input[type="color"].input-large,
+.hui-form .uneditable-input.input-large {
+  width: 190px;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+.hui-form textarea.input-xlarge,
+.hui-form input[type="text"].input-xlarge,
+.hui-form input[type="password"].input-xlarge,
+.hui-form input[type="datetime"].input-xlarge,
+.hui-form input[type="datetime-local"].input-xlarge,
+.hui-form input[type="date"].input-xlarge,
+.hui-form input[type="month"].input-xlarge,
+.hui-form input[type="time"].input-xlarge,
+.hui-form input[type="week"].input-xlarge,
+.hui-form input[type="number"].input-xlarge,
+.hui-form input[type="email"].input-xlarge,
+.hui-form input[type="url"].input-xlarge,
+.hui-form input[type="search"].input-xlarge,
+.hui-form input[type="tel"].input-xlarge,
+.hui-form input[type="color"].input-xlarge,
+.hui-form .uneditable-input.input-xlarge {
+  width: 340px;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+.hui-form textarea.input-xxlarge,
+.hui-form input[type="text"].input-xxlarge,
+.hui-form input[type="password"].input-xxlarge,
+.hui-form input[type="datetime"].input-xxlarge,
+.hui-form input[type="datetime-local"].input-xxlarge,
+.hui-form input[type="date"].input-xxlarge,
+.hui-form input[type="month"].input-xxlarge,
+.hui-form input[type="time"].input-xxlarge,
+.hui-form input[type="week"].input-xxlarge,
+.hui-form input[type="number"].input-xxlarge,
+.hui-form input[type="email"].input-xxlarge,
+.hui-form input[type="url"].input-xxlarge,
+.hui-form input[type="search"].input-xxlarge,
+.hui-form input[type="tel"].input-xxlarge,
+.hui-form input[type="color"].input-xxlarge,
+.hui-form .uneditable-input.input-xxlarge {
+  width: 490px;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+.hui-form textarea.input-thin,
+.hui-form input[type="text"].input-thin,
+.hui-form input[type="password"].input-thin,
+.hui-form input[type="datetime"].input-thin,
+.hui-form input[type="datetime-local"].input-thin,
+.hui-form input[type="date"].input-thin,
+.hui-form input[type="month"].input-thin,
+.hui-form input[type="time"].input-thin,
+.hui-form input[type="week"].input-thin,
+.hui-form input[type="number"].input-thin,
+.hui-form input[type="email"].input-thin,
+.hui-form input[type="url"].input-thin,
+.hui-form input[type="search"].input-thin,
+.hui-form input[type="tel"].input-thin,
+.hui-form input[type="color"].input-thin,
+.hui-form .uneditable-input.input-thin {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.hui-form textarea.input-default,
+.hui-form input[type="text"].input-default,
+.hui-form input[type="password"].input-default,
+.hui-form input[type="datetime"].input-default,
+.hui-form input[type="datetime-local"].input-default,
+.hui-form input[type="date"].input-default,
+.hui-form input[type="month"].input-default,
+.hui-form input[type="time"].input-default,
+.hui-form input[type="week"].input-default,
+.hui-form input[type="number"].input-default,
+.hui-form input[type="email"].input-default,
+.hui-form input[type="url"].input-default,
+.hui-form input[type="search"].input-default,
+.hui-form input[type="tel"].input-default,
+.hui-form input[type="color"].input-default,
+.hui-form .uneditable-input.input-default {
+  display: inline-block;
+  height: 18px;
+  padding: 2px 4px;
+  font-size: 12px;
+  line-height: 18px;
+  color: #555555;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  vertical-align: middle;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border linear .2s, box-shadow linear .2s;
+  -moz-transition: border linear .2s, box-shadow linear .2s;
+  -o-transition: border linear .2s, box-shadow linear .2s;
+  transition: border linear .2s, box-shadow linear .2s;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+.hui-form textarea.input-default:focus,
+.hui-form input[type="text"].input-default:focus,
+.hui-form input[type="password"].input-default:focus,
+.hui-form input[type="datetime"].input-default:focus,
+.hui-form input[type="datetime-local"].input-default:focus,
+.hui-form input[type="date"].input-default:focus,
+.hui-form input[type="month"].input-default:focus,
+.hui-form input[type="time"].input-default:focus,
+.hui-form input[type="week"].input-default:focus,
+.hui-form input[type="number"].input-default:focus,
+.hui-form input[type="email"].input-default:focus,
+.hui-form input[type="url"].input-default:focus,
+.hui-form input[type="search"].input-default:focus,
+.hui-form input[type="tel"].input-default:focus,
+.hui-form input[type="color"].input-default:focus,
+.hui-form .uneditable-input.input-default:focus {
+  border-color: #28a3ef;
+  outline: 0;
+  outline: thin dotted \9;
+  /* IE6-9 */
+}
+
+.hui-form textarea.input-fat,
+.hui-form input[type="text"].input-fat,
+.hui-form input[type="password"].input-fat,
+.hui-form input[type="datetime"].input-fat,
+.hui-form input[type="datetime-local"].input-fat,
+.hui-form input[type="date"].input-fat,
+.hui-form input[type="month"].input-fat,
+.hui-form input[type="time"].input-fat,
+.hui-form input[type="week"].input-fat,
+.hui-form input[type="number"].input-fat,
+.hui-form input[type="email"].input-fat,
+.hui-form input[type="url"].input-fat,
+.hui-form input[type="search"].input-fat,
+.hui-form input[type="tel"].input-fat,
+.hui-form input[type="color"].input-fat,
+.hui-form .uneditable-input.input-fat {
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-right: 8px;
+  padding-left: 8px;
+}
+
+.hui-form textarea.input-fat.input-mini,
+.hui-form input[type="text"].input-fat.input-mini,
+.hui-form input[type="password"].input-fat.input-mini,
+.hui-form input[type="datetime"].input-fat.input-mini,
+.hui-form input[type="datetime-local"].input-fat.input-mini,
+.hui-form input[type="date"].input-fat.input-mini,
+.hui-form input[type="month"].input-fat.input-mini,
+.hui-form input[type="time"].input-fat.input-mini,
+.hui-form input[type="week"].input-fat.input-mini,
+.hui-form input[type="number"].input-fat.input-mini,
+.hui-form input[type="email"].input-fat.input-mini,
+.hui-form input[type="url"].input-fat.input-mini,
+.hui-form input[type="search"].input-fat.input-mini,
+.hui-form input[type="tel"].input-fat.input-mini,
+.hui-form input[type="color"].input-fat.input-mini,
+.hui-form .uneditable-input.input-fat.input-mini {
+  width: 22px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.hui-form textarea.input-fat.input-small,
+.hui-form input[type="text"].input-fat.input-small,
+.hui-form input[type="password"].input-fat.input-small,
+.hui-form input[type="datetime"].input-fat.input-small,
+.hui-form input[type="datetime-local"].input-fat.input-small,
+.hui-form input[type="date"].input-fat.input-small,
+.hui-form input[type="month"].input-fat.input-small,
+.hui-form input[type="time"].input-fat.input-small,
+.hui-form input[type="week"].input-fat.input-small,
+.hui-form input[type="number"].input-fat.input-small,
+.hui-form input[type="email"].input-fat.input-small,
+.hui-form input[type="url"].input-fat.input-small,
+.hui-form input[type="search"].input-fat.input-small,
+.hui-form input[type="tel"].input-fat.input-small,
+.hui-form input[type="color"].input-fat.input-small,
+.hui-form .uneditable-input.input-fat.input-small {
+  width: 42px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.hui-form textarea.input-fat.input-medium,
+.hui-form input[type="text"].input-fat.input-medium,
+.hui-form input[type="password"].input-fat.input-medium,
+.hui-form input[type="datetime"].input-fat.input-medium,
+.hui-form input[type="datetime-local"].input-fat.input-medium,
+.hui-form input[type="date"].input-fat.input-medium,
+.hui-form input[type="month"].input-fat.input-medium,
+.hui-form input[type="time"].input-fat.input-medium,
+.hui-form input[type="week"].input-fat.input-medium,
+.hui-form input[type="number"].input-fat.input-medium,
+.hui-form input[type="email"].input-fat.input-medium,
+.hui-form input[type="url"].input-fat.input-medium,
+.hui-form input[type="search"].input-fat.input-medium,
+.hui-form input[type="tel"].input-fat.input-medium,
+.hui-form input[type="color"].input-fat.input-medium,
+.hui-form .uneditable-input.input-fat.input-medium {
+  width: 102px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.hui-form textarea.input-fat.input-large,
+.hui-form input[type="text"].input-fat.input-large,
+.hui-form input[type="password"].input-fat.input-large,
+.hui-form input[type="datetime"].input-fat.input-large,
+.hui-form input[type="datetime-local"].input-fat.input-large,
+.hui-form input[type="date"].input-fat.input-large,
+.hui-form input[type="month"].input-fat.input-large,
+.hui-form input[type="time"].input-fat.input-large,
+.hui-form input[type="week"].input-fat.input-large,
+.hui-form input[type="number"].input-fat.input-large,
+.hui-form input[type="email"].input-fat.input-large,
+.hui-form input[type="url"].input-fat.input-large,
+.hui-form input[type="search"].input-fat.input-large,
+.hui-form input[type="tel"].input-fat.input-large,
+.hui-form input[type="color"].input-fat.input-large,
+.hui-form .uneditable-input.input-fat.input-large {
+  width: 182px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.hui-form textarea.input-fat.input-xlarge,
+.hui-form input[type="text"].input-fat.input-xlarge,
+.hui-form input[type="password"].input-fat.input-xlarge,
+.hui-form input[type="datetime"].input-fat.input-xlarge,
+.hui-form input[type="datetime-local"].input-fat.input-xlarge,
+.hui-form input[type="date"].input-fat.input-xlarge,
+.hui-form input[type="month"].input-fat.input-xlarge,
+.hui-form input[type="time"].input-fat.input-xlarge,
+.hui-form input[type="week"].input-fat.input-xlarge,
+.hui-form input[type="number"].input-fat.input-xlarge,
+.hui-form input[type="email"].input-fat.input-xlarge,
+.hui-form input[type="url"].input-fat.input-xlarge,
+.hui-form input[type="search"].input-fat.input-xlarge,
+.hui-form input[type="tel"].input-fat.input-xlarge,
+.hui-form input[type="color"].input-fat.input-xlarge,
+.hui-form .uneditable-input.input-fat.input-xlarge {
+  width: 332px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.hui-form textarea.input-fat.input-xxlarge,
+.hui-form input[type="text"].input-fat.input-xxlarge,
+.hui-form input[type="password"].input-fat.input-xxlarge,
+.hui-form input[type="datetime"].input-fat.input-xxlarge,
+.hui-form input[type="datetime-local"].input-fat.input-xxlarge,
+.hui-form input[type="date"].input-fat.input-xxlarge,
+.hui-form input[type="month"].input-fat.input-xxlarge,
+.hui-form input[type="time"].input-fat.input-xxlarge,
+.hui-form input[type="week"].input-fat.input-xxlarge,
+.hui-form input[type="number"].input-fat.input-xxlarge,
+.hui-form input[type="email"].input-fat.input-xxlarge,
+.hui-form input[type="url"].input-fat.input-xxlarge,
+.hui-form input[type="search"].input-fat.input-xxlarge,
+.hui-form input[type="tel"].input-fat.input-xxlarge,
+.hui-form input[type="color"].input-fat.input-xxlarge,
+.hui-form .uneditable-input.input-fat.input-xxlarge {
+  width: 482px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.hui-form textarea.input-xfat,
+.hui-form input[type="text"].input-xfat,
+.hui-form input[type="password"].input-xfat,
+.hui-form input[type="datetime"].input-xfat,
+.hui-form input[type="datetime-local"].input-xfat,
+.hui-form input[type="date"].input-xfat,
+.hui-form input[type="month"].input-xfat,
+.hui-form input[type="time"].input-xfat,
+.hui-form input[type="week"].input-xfat,
+.hui-form input[type="number"].input-xfat,
+.hui-form input[type="email"].input-xfat,
+.hui-form input[type="url"].input-xfat,
+.hui-form input[type="search"].input-xfat,
+.hui-form input[type="tel"].input-xfat,
+.hui-form input[type="color"].input-xfat,
+.hui-form .uneditable-input.input-xfat {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  font-size: 14px;
+  line-height: 22px;
+  padding-right: 8px;
+  padding-left: 8px;
+}
+
+.hui-form textarea.input-xfat.input-mini,
+.hui-form input[type="text"].input-xfat.input-mini,
+.hui-form input[type="password"].input-xfat.input-mini,
+.hui-form input[type="datetime"].input-xfat.input-mini,
+.hui-form input[type="datetime-local"].input-xfat.input-mini,
+.hui-form input[type="date"].input-xfat.input-mini,
+.hui-form input[type="month"].input-xfat.input-mini,
+.hui-form input[type="time"].input-xfat.input-mini,
+.hui-form input[type="week"].input-xfat.input-mini,
+.hui-form input[type="number"].input-xfat.input-mini,
+.hui-form input[type="email"].input-xfat.input-mini,
+.hui-form input[type="url"].input-xfat.input-mini,
+.hui-form input[type="search"].input-xfat.input-mini,
+.hui-form input[type="tel"].input-xfat.input-mini,
+.hui-form input[type="color"].input-xfat.input-mini,
+.hui-form .uneditable-input.input-xfat.input-mini {
+  width: 22px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.hui-form textarea.input-xfat.input-small,
+.hui-form input[type="text"].input-xfat.input-small,
+.hui-form input[type="password"].input-xfat.input-small,
+.hui-form input[type="datetime"].input-xfat.input-small,
+.hui-form input[type="datetime-local"].input-xfat.input-small,
+.hui-form input[type="date"].input-xfat.input-small,
+.hui-form input[type="month"].input-xfat.input-small,
+.hui-form input[type="time"].input-xfat.input-small,
+.hui-form input[type="week"].input-xfat.input-small,
+.hui-form input[type="number"].input-xfat.input-small,
+.hui-form input[type="email"].input-xfat.input-small,
+.hui-form input[type="url"].input-xfat.input-small,
+.hui-form input[type="search"].input-xfat.input-small,
+.hui-form input[type="tel"].input-xfat.input-small,
+.hui-form input[type="color"].input-xfat.input-small,
+.hui-form .uneditable-input.input-xfat.input-small {
+  width: 42px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.hui-form textarea.input-xfat.input-medium,
+.hui-form input[type="text"].input-xfat.input-medium,
+.hui-form input[type="password"].input-xfat.input-medium,
+.hui-form input[type="datetime"].input-xfat.input-medium,
+.hui-form input[type="datetime-local"].input-xfat.input-medium,
+.hui-form input[type="date"].input-xfat.input-medium,
+.hui-form input[type="month"].input-xfat.input-medium,
+.hui-form input[type="time"].input-xfat.input-medium,
+.hui-form input[type="week"].input-xfat.input-medium,
+.hui-form input[type="number"].input-xfat.input-medium,
+.hui-form input[type="email"].input-xfat.input-medium,
+.hui-form input[type="url"].input-xfat.input-medium,
+.hui-form input[type="search"].input-xfat.input-medium,
+.hui-form input[type="tel"].input-xfat.input-medium,
+.hui-form input[type="color"].input-xfat.input-medium,
+.hui-form .uneditable-input.input-xfat.input-medium {
+  width: 102px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.hui-form textarea.input-xfat.input-large,
+.hui-form input[type="text"].input-xfat.input-large,
+.hui-form input[type="password"].input-xfat.input-large,
+.hui-form input[type="datetime"].input-xfat.input-large,
+.hui-form input[type="datetime-local"].input-xfat.input-large,
+.hui-form input[type="date"].input-xfat.input-large,
+.hui-form input[type="month"].input-xfat.input-large,
+.hui-form input[type="time"].input-xfat.input-large,
+.hui-form input[type="week"].input-xfat.input-large,
+.hui-form input[type="number"].input-xfat.input-large,
+.hui-form input[type="email"].input-xfat.input-large,
+.hui-form input[type="url"].input-xfat.input-large,
+.hui-form input[type="search"].input-xfat.input-large,
+.hui-form input[type="tel"].input-xfat.input-large,
+.hui-form input[type="color"].input-xfat.input-large,
+.hui-form .uneditable-input.input-xfat.input-large {
+  width: 182px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.hui-form textarea.input-xfat.input-xlarge,
+.hui-form input[type="text"].input-xfat.input-xlarge,
+.hui-form input[type="password"].input-xfat.input-xlarge,
+.hui-form input[type="datetime"].input-xfat.input-xlarge,
+.hui-form input[type="datetime-local"].input-xfat.input-xlarge,
+.hui-form input[type="date"].input-xfat.input-xlarge,
+.hui-form input[type="month"].input-xfat.input-xlarge,
+.hui-form input[type="time"].input-xfat.input-xlarge,
+.hui-form input[type="week"].input-xfat.input-xlarge,
+.hui-form input[type="number"].input-xfat.input-xlarge,
+.hui-form input[type="email"].input-xfat.input-xlarge,
+.hui-form input[type="url"].input-xfat.input-xlarge,
+.hui-form input[type="search"].input-xfat.input-xlarge,
+.hui-form input[type="tel"].input-xfat.input-xlarge,
+.hui-form input[type="color"].input-xfat.input-xlarge,
+.hui-form .uneditable-input.input-xfat.input-xlarge {
+  width: 332px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.hui-form textarea.input-xfat.input-xxlarge,
+.hui-form input[type="text"].input-xfat.input-xxlarge,
+.hui-form input[type="password"].input-xfat.input-xxlarge,
+.hui-form input[type="datetime"].input-xfat.input-xxlarge,
+.hui-form input[type="datetime-local"].input-xfat.input-xxlarge,
+.hui-form input[type="date"].input-xfat.input-xxlarge,
+.hui-form input[type="month"].input-xfat.input-xxlarge,
+.hui-form input[type="time"].input-xfat.input-xxlarge,
+.hui-form input[type="week"].input-xfat.input-xxlarge,
+.hui-form input[type="number"].input-xfat.input-xxlarge,
+.hui-form input[type="email"].input-xfat.input-xxlarge,
+.hui-form input[type="url"].input-xfat.input-xxlarge,
+.hui-form input[type="search"].input-xfat.input-xxlarge,
+.hui-form input[type="tel"].input-xfat.input-xxlarge,
+.hui-form input[type="color"].input-xfat.input-xxlarge,
+.hui-form .uneditable-input.input-xfat.input-xxlarge {
+  width: 482px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.hui-form select.input-thin {
+  height: 20px;
+}
+
+.hui-form select.input-default {
+  height: 24px;
+}
+
+.hui-form select.input-fat {
+  height: 28px;
+}
+
+.hui-form select.input-xfat {
+  height: 32px;
+}
+
+.hui-form input[class*="span"],
+.hui-form select[class*="span"],
+.hui-form textarea[class*="span"],
+.hui-form .uneditable-input[class*="span"],
+.hui-form .row-fluid input[class*="span"],
+.hui-form .row-fluid select[class*="span"],
+.hui-form .row-fluid textarea[class*="span"],
+.hui-form .row-fluid .uneditable-input[class*="span"] {
+  float: none;
+  margin-left: 0;
+}
+
+.hui-form .input-append input[class*="span"],
+.hui-form .input-append .uneditable-input[class*="span"],
+.hui-form .input-prepend input[class*="span"],
+.hui-form .input-prepend .uneditable-input[class*="span"],
+.hui-form .row-fluid input[class*="span"],
+.hui-form .row-fluid select[class*="span"],
+.hui-form .row-fluid textarea[class*="span"],
+.hui-form .row-fluid .uneditable-input[class*="span"],
+.hui-form .row-fluid .input-prepend [class*="span"],
+.hui-form .row-fluid .input-append [class*="span"] {
+  display: inline-block;
+}
+
+.hui-form input,
+.hui-form textarea,
+.hui-form .uneditable-input {
+  margin-left: 0;
+}
+
+.hui-form .controls-row [class*="span"] + [class*="span"] {
+  margin-left: 10px;
+}
+
+.hui-form input.span12,
+.hui-form textarea.span12,
+.hui-form .uneditable-input.span12 {
+  width: 984px;
+}
+
+.hui-form input.span11,
+.hui-form textarea.span11,
+.hui-form .uneditable-input.span11 {
+  width: 900px;
+}
+
+.hui-form input.span10,
+.hui-form textarea.span10,
+.hui-form .uneditable-input.span10 {
+  width: 816px;
+}
+
+.hui-form input.span9,
+.hui-form textarea.span9,
+.hui-form .uneditable-input.span9 {
+  width: 732px;
+}
+
+.hui-form input.span8,
+.hui-form textarea.span8,
+.hui-form .uneditable-input.span8 {
+  width: 648px;
+}
+
+.hui-form input.span7,
+.hui-form textarea.span7,
+.hui-form .uneditable-input.span7 {
+  width: 564px;
+}
+
+.hui-form input.span6,
+.hui-form textarea.span6,
+.hui-form .uneditable-input.span6 {
+  width: 480px;
+}
+
+.hui-form input.span5,
+.hui-form textarea.span5,
+.hui-form .uneditable-input.span5 {
+  width: 396px;
+}
+
+.hui-form input.span4,
+.hui-form textarea.span4,
+.hui-form .uneditable-input.span4 {
+  width: 312px;
+}
+
+.hui-form input.span3,
+.hui-form textarea.span3,
+.hui-form .uneditable-input.span3 {
+  width: 228px;
+}
+
+.hui-form input.span2,
+.hui-form textarea.span2,
+.hui-form .uneditable-input.span2 {
+  width: 144px;
+}
+
+.hui-form input.span1,
+.hui-form textarea.span1,
+.hui-form .uneditable-input.span1 {
+  width: 60px;
+}
+
+.hui-form .controls-row:before,
+.hui-form .controls-row:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+
+.hui-form .controls-row:after {
+  clear: both;
+}
+
+.hui-form .controls-row [class*="span"],
+.hui-form .row-fluid .controls-row [class*="span"] {
+  float: left;
+}
+
+.hui-form .row-fluid + .row-fluid {
+  margin-top: 9px;
+}
+
+.hui-form input[disabled],
+.hui-form select[disabled],
+.hui-form textarea[disabled],
+.hui-form input[readonly],
+.hui-form select[readonly],
+.hui-form textarea[readonly] {
+  cursor: not-allowed;
+  background-color: #ffffff;
+}
+
+.hui-form input[type="radio"][disabled],
+.hui-form input[type="checkbox"][disabled],
+.hui-form input[type="radio"][readonly],
+.hui-form input[type="checkbox"][readonly] {
+  background-color: transparent;
+}
+
+.hui-form .warning .form-label,
+.hui-form .warning .help-block,
+.hui-form .warning .help-inline {
+  color: #ff7300;
+}
+
+.hui-form .warning input,
+.hui-form .warning select,
+.hui-form .warning textarea {
+  border-color: #ff7300;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+
+.hui-form .warning input:focus,
+.hui-form .warning select:focus,
+.hui-form .warning textarea:focus {
+  border-color: #cc5c00;
+}
+
+.hui-form .warning .input-prepend .add-on,
+.hui-form .warning .input-append .add-on {
+  color: #ff7300;
+  background-color: #fcf8e3;
+  border-color: #ff7300;
+}
+
+.hui-form .error .form-label,
+.hui-form .error .help-block,
+.hui-form .error .help-inline {
+  color: #ea4a36;
+}
+
+.hui-form .error input,
+.hui-form .error select,
+.hui-form .error textarea {
+  border-color: #ea4a36;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+
+.hui-form .error input:focus,
+.hui-form .error select:focus,
+.hui-form .error textarea:focus {
+  border-color: #d72c16;
+}
+
+.hui-form .error .input-prepend .add-on,
+.hui-form .error .input-append .add-on {
+  color: #ea4a36;
+  background-color: #f2dede;
+  border-color: #ea4a36;
+}
+
+.hui-form .success .form-label,
+.hui-form .success .help-block,
+.hui-form .success .help-inline {
+  color: #22cd6e;
+}
+
+.hui-form .success input,
+.hui-form .success select,
+.hui-form .success textarea {
+  border-color: #22cd6e;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+
+.hui-form .success input:focus,
+.hui-form .success select:focus,
+.hui-form .success textarea:focus {
+  border-color: #1ba157;
+}
+
+.hui-form .success .input-prepend .add-on,
+.hui-form .success .input-append .add-on {
+  color: #22cd6e;
+  background-color: #dff0d8;
+  border-color: #22cd6e;
+}
+
+.hui-form .info .form-label,
+.hui-form .info .help-block,
+.hui-form .info .help-inline {
+  color: #2597dd;
+}
+
+.hui-form .info input,
+.hui-form .info select,
+.hui-form .info textarea {
+  border-color: #2597dd;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+
+.hui-form .info input:focus,
+.hui-form .info select:focus,
+.hui-form .info textarea:focus {
+  border-color: #1c7ab3;
+}
+
+.hui-form .info .input-prepend .add-on,
+.hui-form .info .input-append .add-on {
+  color: #2597dd;
+  background-color: #d9edf7;
+  border-color: #2597dd;
+}
+
+.hui-form input:focus:invalid,
+.hui-form textarea:focus:invalid,
+.hui-form select:focus:invalid {
+  color: #b94a48;
+  border-color: #ee5f5b;
+}
+
+.hui-form input:focus:invalid:focus,
+.hui-form textarea:focus:invalid:focus,
+.hui-form select:focus:invalid:focus {
+  border-color: #e9322d;
+}
+
+.hui-form .input-warning {
+  border-color: #ff7300;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+
+.hui-form .input-warning:focus {
+  border-color: #cc5c00;
+}
+
+.hui-form .input-error {
+  border-color: #ea4a36;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+
+.hui-form .input-error:focus {
+  border-color: #d72c16;
+}
+
+.hui-form .input-success {
+  border-color: #22cd6e;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+
+.hui-form .input-success:focus {
+  border-color: #1ba157;
+}
+
+.hui-form .input-info {
+  border-color: #2597dd;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+
+.hui-form .input-info:focus {
+  border-color: #1c7ab3;
+}
+
+.hui-form textarea.input-warning,
+.hui-form input[type="text"].input-warning,
+.hui-form input[type="password"].input-warning,
+.hui-form input[type="datetime"].input-warning,
+.hui-form input[type="datetime-local"].input-warning,
+.hui-form input[type="date"].input-warning,
+.hui-form input[type="month"].input-warning,
+.hui-form input[type="time"].input-warning,
+.hui-form input[type="week"].input-warning,
+.hui-form input[type="number"].input-warning,
+.hui-form input[type="email"].input-warning,
+.hui-form input[type="url"].input-warning,
+.hui-form input[type="search"].input-warning,
+.hui-form input[type="tel"].input-warning,
+.hui-form input[type="color"].input-warning {
+  border-color: #ff7300;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+
+.hui-form textarea.input-warning:focus,
+.hui-form input[type="text"].input-warning:focus,
+.hui-form input[type="password"].input-warning:focus,
+.hui-form input[type="datetime"].input-warning:focus,
+.hui-form input[type="datetime-local"].input-warning:focus,
+.hui-form input[type="date"].input-warning:focus,
+.hui-form input[type="month"].input-warning:focus,
+.hui-form input[type="time"].input-warning:focus,
+.hui-form input[type="week"].input-warning:focus,
+.hui-form input[type="number"].input-warning:focus,
+.hui-form input[type="email"].input-warning:focus,
+.hui-form input[type="url"].input-warning:focus,
+.hui-form input[type="search"].input-warning:focus,
+.hui-form input[type="tel"].input-warning:focus,
+.hui-form input[type="color"].input-warning:focus {
+  border-color: #cc5c00;
+}
+
+.hui-form textarea.input-success,
+.hui-form input[type="text"].input-success,
+.hui-form input[type="password"].input-success,
+.hui-form input[type="datetime"].input-success,
+.hui-form input[type="datetime-local"].input-success,
+.hui-form input[type="date"].input-success,
+.hui-form input[type="month"].input-success,
+.hui-form input[type="time"].input-success,
+.hui-form input[type="week"].input-success,
+.hui-form input[type="number"].input-success,
+.hui-form input[type="email"].input-success,
+.hui-form input[type="url"].input-success,
+.hui-form input[type="search"].input-success,
+.hui-form input[type="tel"].input-success,
+.hui-form input[type="color"].input-success {
+  border-color: #22cd6e;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+
+.hui-form textarea.input-success:focus,
+.hui-form input[type="text"].input-success:focus,
+.hui-form input[type="password"].input-success:focus,
+.hui-form input[type="datetime"].input-success:focus,
+.hui-form input[type="datetime-local"].input-success:focus,
+.hui-form input[type="date"].input-success:focus,
+.hui-form input[type="month"].input-success:focus,
+.hui-form input[type="time"].input-success:focus,
+.hui-form input[type="week"].input-success:focus,
+.hui-form input[type="number"].input-success:focus,
+.hui-form input[type="email"].input-success:focus,
+.hui-form input[type="url"].input-success:focus,
+.hui-form input[type="search"].input-success:focus,
+.hui-form input[type="tel"].input-success:focus,
+.hui-form input[type="color"].input-success:focus {
+  border-color: #1ba157;
+}
+
+.hui-form textarea.input-error,
+.hui-form input[type="text"].input-error,
+.hui-form input[type="password"].input-error,
+.hui-form input[type="datetime"].input-error,
+.hui-form input[type="datetime-local"].input-error,
+.hui-form input[type="date"].input-error,
+.hui-form input[type="month"].input-error,
+.hui-form input[type="time"].input-error,
+.hui-form input[type="week"].input-error,
+.hui-form input[type="number"].input-error,
+.hui-form input[type="email"].input-error,
+.hui-form input[type="url"].input-error,
+.hui-form input[type="search"].input-error,
+.hui-form input[type="tel"].input-error,
+.hui-form input[type="color"].input-error {
+  border-color: #ea4a36;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+
+.hui-form textarea.input-error:focus,
+.hui-form input[type="text"].input-error:focus,
+.hui-form input[type="password"].input-error:focus,
+.hui-form input[type="datetime"].input-error:focus,
+.hui-form input[type="datetime-local"].input-error:focus,
+.hui-form input[type="date"].input-error:focus,
+.hui-form input[type="month"].input-error:focus,
+.hui-form input[type="time"].input-error:focus,
+.hui-form input[type="week"].input-error:focus,
+.hui-form input[type="number"].input-error:focus,
+.hui-form input[type="email"].input-error:focus,
+.hui-form input[type="url"].input-error:focus,
+.hui-form input[type="search"].input-error:focus,
+.hui-form input[type="tel"].input-error:focus,
+.hui-form input[type="color"].input-error:focus {
+  border-color: #d72c16;
+}
+
+.hui-form textarea.input-info,
+.hui-form input[type="text"].input-info,
+.hui-form input[type="password"].input-info,
+.hui-form input[type="datetime"].input-info,
+.hui-form input[type="datetime-local"].input-info,
+.hui-form input[type="date"].input-info,
+.hui-form input[type="month"].input-info,
+.hui-form input[type="time"].input-info,
+.hui-form input[type="week"].input-info,
+.hui-form input[type="number"].input-info,
+.hui-form input[type="email"].input-info,
+.hui-form input[type="url"].input-info,
+.hui-form input[type="search"].input-info,
+.hui-form input[type="tel"].input-info,
+.hui-form input[type="color"].input-info {
+  border-color: #2597dd;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+
+.hui-form textarea.input-info:focus,
+.hui-form input[type="text"].input-info:focus,
+.hui-form input[type="password"].input-info:focus,
+.hui-form input[type="datetime"].input-info:focus,
+.hui-form input[type="datetime-local"].input-info:focus,
+.hui-form input[type="date"].input-info:focus,
+.hui-form input[type="month"].input-info:focus,
+.hui-form input[type="time"].input-info:focus,
+.hui-form input[type="week"].input-info:focus,
+.hui-form input[type="number"].input-info:focus,
+.hui-form input[type="email"].input-info:focus,
+.hui-form input[type="url"].input-info:focus,
+.hui-form input[type="search"].input-info:focus,
+.hui-form input[type="tel"].input-info:focus,
+.hui-form input[type="color"].input-info:focus {
+  border-color: #1c7ab3;
+}
+
+.hui-form .input-date {
+  background-image: url(data:image/png;base64,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);
+  background-position: right center;
+  background-repeat: no-repeat;
+}
+
+.hui-form.form-actions {
+  padding: 17px 20px 18px;
+  margin-top: 18px;
+  margin-bottom: 18px;
+  background-color: #f5f5f5;
+  border-top: 1px solid #e5e5e5;
+}
+
+.hui-form.form-actions:before,
+.hui-form.form-actions:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+
+.hui-form.form-actions:after {
+  clear: both;
+}
+
+.hui-form .help-block,
+.hui-form .help-inline {
+  color: #595959;
+}
+
+.hui-form .help-block {
+  display: block;
+  margin-top: 9px;
+}
+
+.hui-form .help-inline {
+  display: inline-block;
+  margin-left: 6px;
+  *display: inline;
+  /* IE7 inline-block hack */
+
+  *zoom: 1;
+  vertical-align: middle;
+}
+
+.hui-form .input-append,
+.hui-form .input-prepend {
+  display: inline-block;
+  margin-bottom: 9px;
+  vertical-align: middle;
+  font-size: 0;
+  white-space: nowrap;
+}
+
+.hui-form .input-append input,
+.hui-form .input-prepend input,
+.hui-form .input-append select,
+.hui-form .input-prepend select,
+.hui-form .input-append .uneditable-input,
+.hui-form .input-prepend .uneditable-input,
+.hui-form .input-append .dropdown-menu,
+.hui-form .input-prepend .dropdown-menu,
+.hui-form .input-append .popover,
+.hui-form .input-prepend .popover {
+  font-size: 12px;
+}
+
+.hui-form .input-append input,
+.hui-form .input-prepend input,
+.hui-form .input-append select,
+.hui-form .input-prepend select,
+.hui-form .input-append .uneditable-input,
+.hui-form .input-prepend .uneditable-input {
+  position: relative;
+  margin-bottom: 0;
+  *margin-left: 0;
+  vertical-align: top;
+  -webkit-border-radius: 0 2px 2px 0;
+  -moz-border-radius: 0 2px 2px 0;
+  border-radius: 0 2px 2px 0;
+}
+
+.hui-form .input-append input:focus,
+.hui-form .input-prepend input:focus,
+.hui-form .input-append select:focus,
+.hui-form .input-prepend select:focus,
+.hui-form .input-append .uneditable-input:focus,
+.hui-form .input-prepend .uneditable-input:focus {
+  z-index: 2;
+}
+
+.hui-form .input-append .add-on,
+.hui-form .input-prepend .add-on {
+  display: inline-block;
+  width: auto;
+  height: 18px;
+  min-width: 16px;
+  padding: 4px 5px;
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 18px;
+  text-align: center;
+  text-shadow: 0 1px 0 #ffffff;
+  background-color: #eeeeee;
+  border: 1px solid #ccc;
+}
+
+.hui-form .input-append .add-on,
+.hui-form .input-prepend .add-on,
+.hui-form .input-append .btn,
+.hui-form .input-prepend .btn,
+.hui-form .input-append .btn-group > .dropdown-toggle,
+.hui-form .input-prepend .btn-group > .dropdown-toggle {
+  vertical-align: top;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+
+.hui-form .input-append .active,
+.hui-form .input-prepend .active {
+  background-color: #a9dba9;
+  border-color: #46a546;
+}
+
+.hui-form .input-inner {
+  display: inline-block;
+  margin-bottom: 9px;
+  vertical-align: middle;
+  font-size: 0;
+  white-space: nowrap;
+}
+
+.hui-form .input-inner input,
+.hui-form .input-inner select,
+.hui-form .input-inner .uneditable-input,
+.hui-form .input-inner .dropdown-menu,
+.hui-form .input-inner .popover {
+  font-size: 12px;
+}
+
+.hui-form .input-inner input,
+.hui-form .input-inner select,
+.hui-form .input-inner .uneditable-input {
+  position: relative;
+  margin-bottom: 0;
+  *margin-left: 0;
+  vertical-align: top;
+  -webkit-border-radius: 0 2px 2px 0;
+  -moz-border-radius: 0 2px 2px 0;
+  border-radius: 0 2px 2px 0;
+}
+
+.hui-form .input-inner input:focus,
+.hui-form .input-inner select:focus,
+.hui-form .input-inner .uneditable-input:focus {
+  z-index: 2;
+}
+
+.hui-form .input-inner .add-on {
+  display: inline-block;
+  width: auto;
+  height: 18px;
+  min-width: 16px;
+  padding: 4px 5px;
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 18px;
+  text-align: center;
+  text-shadow: 0 1px 0 #ffffff;
+  background-color: #eeeeee;
+  border: 1px solid #ccc;
+}
+
+.hui-form .input-inner .add-on,
+.hui-form .input-inner .btn,
+.hui-form .input-inner .btn-group > .dropdown-toggle {
+  vertical-align: top;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+
+.hui-form .input-inner .active {
+  background-color: #a9dba9;
+  border-color: #46a546;
+}
+
+.hui-form .input-inner input,
+.hui-form .input-inner select,
+.hui-form .input-inner .uneditable-input {
+  -webkit-border-radius: 2px 0 0 2px;
+  -moz-border-radius: 2px 0 0 2px;
+  border-radius: 2px 0 0 2px;
+}
+
+.hui-form .input-inner input + .btn-group .btn:last-child,
+.hui-form .input-inner select + .btn-group .btn:last-child,
+.hui-form .input-inner .uneditable-input + .btn-group .btn:last-child {
+  -webkit-border-radius: 0 2px 2px 0;
+  -moz-border-radius: 0 2px 2px 0;
+  border-radius: 0 2px 2px 0;
+}
+
+.hui-form .input-inner .add-on,
+.hui-form .input-inner .btn,
+.hui-form .input-inner .btn-group {
+  margin-left: -1px;
+}
+
+.hui-form .input-inner .add-on:last-child,
+.hui-form .input-inner .btn:last-child,
+.hui-form .input-inner .btn-group:last-child > .dropdown-toggle {
+  -webkit-border-radius: 0 2px 2px 0;
+  -moz-border-radius: 0 2px 2px 0;
+  border-radius: 0 2px 2px 0;
+}
+
+.hui-form .input-inner input {
+  -webkit-border-radius: 2px 0 0 2px;
+  -moz-border-radius: 2px 0 0 2px;
+  border-radius: 2px 0 0 2px;
+}
+
+.hui-form .input-inner .add-on {
+  margin-right: -1px;
+}
+
+.hui-form .input-inner .add-on + input {
+  -webkit-border-radius: 0 2px 2px 0;
+  -moz-border-radius: 0 2px 2px 0;
+  border-radius: 0 2px 2px 0;
+}
+
+.hui-form .input-prepend .add-on,
+.hui-form .input-prepend .btn {
+  margin-right: -1px;
+}
+
+.hui-form .input-prepend .add-on:first-child,
+.hui-form .input-prepend .btn:first-child {
+  -webkit-border-radius: 2px 0 0 2px;
+  -moz-border-radius: 2px 0 0 2px;
+  border-radius: 2px 0 0 2px;
+}
+
+.hui-form .input-append input,
+.hui-form .input-append select,
+.hui-form .input-append .uneditable-input {
+  -webkit-border-radius: 2px 0 0 2px;
+  -moz-border-radius: 2px 0 0 2px;
+  border-radius: 2px 0 0 2px;
+}
+
+.hui-form .input-append input + .btn-group .btn:last-child,
+.hui-form .input-append select + .btn-group .btn:last-child,
+.hui-form .input-append .uneditable-input + .btn-group .btn:last-child {
+  -webkit-border-radius: 0 2px 2px 0;
+  -moz-border-radius: 0 2px 2px 0;
+  border-radius: 0 2px 2px 0;
+}
+
+.hui-form .input-append .add-on,
+.hui-form .input-append .btn,
+.hui-form .input-append .btn-group {
+  margin-left: -1px;
+}
+
+.hui-form .input-append .add-on:last-child,
+.hui-form .input-append .btn:last-child,
+.hui-form .input-append .btn-group:last-child > .dropdown-toggle {
+  -webkit-border-radius: 0 2px 2px 0;
+  -moz-border-radius: 0 2px 2px 0;
+  border-radius: 0 2px 2px 0;
+}
+
+.hui-form .input-prepend.input-append input,
+.hui-form .input-prepend.input-append select,
+.hui-form .input-prepend.input-append .uneditable-input {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+
+.hui-form .input-prepend.input-append input + .btn-group .btn,
+.hui-form .input-prepend.input-append select + .btn-group .btn,
+.hui-form .input-prepend.input-append .uneditable-input + .btn-group .btn {
+  -webkit-border-radius: 0 2px 2px 0;
+  -moz-border-radius: 0 2px 2px 0;
+  border-radius: 0 2px 2px 0;
+}
+
+.hui-form .input-prepend.input-append .add-on:first-child,
+.hui-form .input-prepend.input-append .btn:first-child {
+  margin-right: -1px;
+  -webkit-border-radius: 2px 0 0 2px;
+  -moz-border-radius: 2px 0 0 2px;
+  border-radius: 2px 0 0 2px;
+}
+
+.hui-form .input-prepend.input-append .add-on:last-child,
+.hui-form .input-prepend.input-append .btn:last-child {
+  margin-left: -1px;
+  -webkit-border-radius: 0 2px 2px 0;
+  -moz-border-radius: 0 2px 2px 0;
+  border-radius: 0 2px 2px 0;
+}
+
+.hui-form .input-prepend.input-append .btn-group:first-child {
+  margin-left: 0;
+}
+
+.hui-form input.search-query {
+  padding-right: 14px;
+  padding-right: 4px \9;
+  padding-left: 14px;
+  padding-left: 4px \9;
+  /* IE7-8 doesn't have border-radius, so don't indent the padding */
+
+  margin-bottom: 0;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+}
+
+.hui-form.form-search .input-append .search-query,
+.hui-form.form-search .input-prepend .search-query {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+
+.hui-form.form-search .input-append .search-query {
+  -webkit-border-radius: 14px 0 0 14px;
+  -moz-border-radius: 14px 0 0 14px;
+  border-radius: 14px 0 0 14px;
+}
+
+.hui-form.form-search .input-append .btn {
+  -webkit-border-radius: 0 14px 14px 0;
+  -moz-border-radius: 0 14px 14px 0;
+  border-radius: 0 14px 14px 0;
+}
+
+.hui-form.form-search .input-prepend .search-query {
+  -webkit-border-radius: 0 14px 14px 0;
+  -moz-border-radius: 0 14px 14px 0;
+  border-radius: 0 14px 14px 0;
+}
+
+.hui-form.form-search .input-prepend .btn {
+  -webkit-border-radius: 14px 0 0 14px;
+  -moz-border-radius: 14px 0 0 14px;
+  border-radius: 14px 0 0 14px;
+}
+
+.hui-form.form-search input,
+.hui-form.form-inline input,
+.hui-form.form-horizontal input,
+.hui-form.form-search textarea,
+.hui-form.form-inline textarea,
+.hui-form.form-horizontal textarea,
+.hui-form.form-search select,
+.hui-form.form-inline select,
+.hui-form.form-horizontal select,
+.hui-form.form-search .help-inline,
+.hui-form.form-inline .help-inline,
+.hui-form.form-horizontal .help-inline,
+.hui-form.form-search .uneditable-input,
+.hui-form.form-inline .uneditable-input,
+.hui-form.form-horizontal .uneditable-input,
+.hui-form.form-search .input-prepend,
+.hui-form.form-inline .input-prepend,
+.hui-form.form-horizontal .input-prepend,
+.hui-form.form-search .input-append,
+.hui-form.form-inline .input-append,
+.hui-form.form-horizontal .input-append {
+  display: inline-block;
+  *display: inline;
+  /* IE7 inline-block hack */
+  *zoom: 1;
+  margin-bottom: 0;
+  vertical-align: middle;
+}
+
+.hui-form.form-search .hide,
+.hui-form.form-inline .hide,
+.hui-form.form-horizontal .hide {
+  display: none;
+}
+
+.hui-form.form-search label,
+.hui-form.form-inline label,
+.hui-form.form-search .btn-group,
+.hui-form.form-inline .btn-group {
+  display: inline-block;
+}
+
+.hui-form.form-search .input-append,
+.hui-form.form-inline .input-append,
+.hui-form.form-search .input-prepend,
+.hui-form.form-inline .input-prepend {
+  margin-bottom: 0;
+}
+
+.hui-form.form-search .radio,
+.hui-form.form-search .checkbox,
+.hui-form.form-inline .radio,
+.hui-form.form-inline .checkbox {
+  padding-left: 0;
+  margin-bottom: 0;
+  vertical-align: middle;
+}
+
+.hui-form .form-group {
+  margin-bottom: 9px;
+}
+
+.hui-form .form-label {
+  display: block;
+  line-height: 24px;
+}
+
+.hui-form legend + .form-group {
+  margin-top: 18px;
+  -webkit-margin-top-collapse: separate;
+}
+
+.hui-form.form-horizontal .form-group {
+  margin-bottom: 18px;
+  display: table;
+}
+
+.hui-form.form-horizontal .form-label {
+  width: 96px;
+  text-align: right;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.hui-form.form-horizontal .v-top {
+  vertical-align: top;
+}
+
+.hui-form.form-horizontal .v-bottom {
+  vertical-align: bottom;
+}
+
+.hui-form.form-horizontal .form-cont {
+  display: table-cell;
+  padding-left: 3px;
+}
+
+.hui-form.form-horizontal .form-cont:first-child {
+  *padding-left: 96px;
+}
+
+.hui-form.form-horizontal .help-block {
+  margin-top: 0;
+}
+
+.hui-form.form-horizontal input ~ .help-block,
+.hui-form.form-horizontal select ~ .help-block,
+.hui-form.form-horizontal textarea ~ .help-block,
+.hui-form.form-horizontal .uneditable-input ~ .help-block,
+.hui-form.form-horizontal .input-prepend ~ .help-block,
+.hui-form.form-horizontal .input-append ~ .help-block,
+.hui-form.form-horizontal .radio ~ .help-block,
+.hui-form.form-horizontal .radio-pretty ~ .help-block,
+.hui-form.form-horizontal .checkbox-pretty ~ .help-block,
+.hui-form.form-horizontal .sui-dropdown ~ .help-block,
+.hui-form.form-horizontal .checkbox ~ .help-block {
+  margin-top: 9px;
+}
+
+.hui-form.form-horizontal.form-actions {
+  padding-left: 96px;
+}
+
+.hui-form .input-control {
+  display: inline-block;
+  position: relative;
+}
+
+.hui-form .input-control .sui-icon {
+  position: absolute;
+  color: #aaa;
+  font-size: 14px;
+  left: 6px;
+  top: 5px;
+}
+
+.hui-form .input-control .input-thin + .sui-icon {
+  top: 4px;
+  font-size: 12px;
+}
+
+.hui-form .input-control .input-fat + .sui-icon {
+  top: 7px;
+}
+
+.hui-form .input-control .input-xfat + .sui-icon {
+  top: 8px;
+  font-size: 16px;
+}
+
+.hui-form .input-control input:focus ~ .sui-icon {
+  display: none;
+}
+.hui-form .input-control.control-right .sui-icon {
+  left: auto;
+  right: 6px;
+}
+/* =========================  hui less end! ========================= */
